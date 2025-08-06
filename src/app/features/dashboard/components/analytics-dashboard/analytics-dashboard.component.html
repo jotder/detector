@@ -1,0 +1,9 @@
+<div *ngIf="summary">
+  <h3>Analytics Summary</h3>
+  <ul>
+    <li>Refunds: {{ summary.refunds }}</li>
+    <li>Discounts: {{ summary.discounts }}</li>
+    <li>Price Overrides: {{ summary.priceOverrides }}</li>
+    <li>Cancels: {{ summary.cancels }}</li>
+  </ul>
+</div>
