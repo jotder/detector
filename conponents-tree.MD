@@ -1,0 +1,78 @@
+- auth
+  - Login
+  - Forget Password
+- Dashboard & Reporting
+  - Executive Dashboard
+    - Alerts Summary
+    - Open Alert Count
+    - WIP Alert Count
+    - Closed Alert Count
+  - Analytics - Post the PLACARDS, We want a high-risk store and cashier view
+    - Refunds
+    - Discounts
+    - Price Override
+    - Cancel
+  - Risky Stores
+    - Top 20 High Risk Stores
+    - Outlier, trends by stores- Calculation to be done basis on the weightage, Current period vs previous , C. Month vs PM
+  - Risky Cashiers
+    - Outlier, trends by Cashiers- Calculation to be done on the weightage, C. Month vs PM Current period vs previous period
+  - Drill Down View
+    - By Store (for selected store)
+      - Discount value
+      - Cash over short value
+      - Refund % of net sales
+      - Cash refund amount by store
+      - Cancel count %
+      - Price override %
+    - By Cashier (for selected cashier)
+      - Refund % of net sales by cashier
+      - Cash refund amount by Cashier
+      - Cash over short by cashier
+- Reports
+  - Reports Creation
+  - Custom Reports
+  - CRUD
+- Rules
+  - Rule Viewer
+  - Active Rules Count
+  - Passive Rules Count
+  - Create CRUD
+  - Schedule
+  - Trigger info Alert template
+  - Rule Status @ exec log
+  - Manage
+- Alerts
+  - Alerts Dashboard
+  - Alert along with receipt
+  - Transaction Finder
+  - Link Analysis
+- Agentic AI & Chat bot
+  - Model builder
+  - Prompt
+- Cases
+  - Case Dashboard
+  - Case Viewer
+  - Active Case Count
+  - Passive Case Count
+  - Create CRUD
+  - Network Analysis
+  - Trigger info Alert template
+  - Case status @ exec log
+  - Manage
+- Control Panel
+  - User Management
+  - Roles & Access management
+  - Integration
+  - Job Management
+  - Scheduler
+  - Security
+  - Billing
+  - Logging
+  - Analytics
+  - Manage Views, filters, API & Parms etc
+- shared
+  - components
+  - directives
+  - pipes
+  - imports
