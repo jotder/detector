@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { CasesComponent } from './pages/cases/cases.component';
+import {Routes} from '@angular/router';
+import {Cases} from './pages/cases/cases';
 
 export const CASES_ROUTES: Routes = [
-  {
-    path: '',
-    component: CasesComponent,
-    pathMatch: 'full',
-  },
+    {
+        path: '',
+        component: Cases,
+        pathMatch: 'full',
+    },
 ];

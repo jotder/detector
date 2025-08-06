@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { ReportsComponent } from './pages/reports/reports.component';
+import {Routes} from '@angular/router';
+import {Reports} from './pages/reports/reports';
 
 export const REPORTS_ROUTES: Routes = [
-  {
-    path: '',
-    component: ReportsComponent,
-    pathMatch: 'full',
-  },
+    {
+        path: '',
+        component: Reports,
+        pathMatch: 'full',
+    },
 ];

@@ -1,0 +1,16 @@
+<aside class="sidebar">
+    <div class="logo-container">
+        <!-- A placeholder for your application's logo -->
+        <span class="logo">AD</span>
+    </div>
+    <nav class="navigation">
+        <ul>
+            <!--          <li *ngFor="let item of navItems() | async">-->
+            <li *ngFor="let item of navItems">
+                <a [routerLinkActiveOptions]="{exact: true}" [routerLink]="item.path" routerLinkActive="active-link">
+                    <span class="nav-label">{{ item.label }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>

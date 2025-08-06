@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { AiComponent } from './pages/ai/ai.component';
+import {Routes} from '@angular/router';
+import {Ai} from './pages/ai/ai';
 
 export const AI_ROUTES: Routes = [
-  {
-    path: '',
-    component: AiComponent,
-    pathMatch: 'full',
-  },
+    {
+        path: '',
+        component: Ai,
+        pathMatch: 'full',
+    },
 ];

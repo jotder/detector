@@ -1,0 +1,9 @@
+<div class="dashboard-container">
+    <app-executive-dashboard [summary]="executiveSummary()!"></app-executive-dashboard>
+    <app-analytics-dashboard [summary]="analyticsSummary()!"></app-analytics-dashboard>
+    <div class="risk-widgets">
+        <app-risky-stores [stores]="riskyStores()!"></app-risky-stores>
+        <app-risky-cashiers [cashiers]="riskyCashiers()!"></app-risky-cashiers>
+    </div>
+    <app-drill-down-view></app-drill-down-view>
+</div>

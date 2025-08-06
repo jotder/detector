@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { AlertsComponent } from './pages/alerts/alerts.component';
+import {Routes} from '@angular/router';
+import {Alerts} from './pages/alerts/alerts';
 
 export const ALERTS_ROUTES: Routes = [
-  {
-    path: '',
-    component: AlertsComponent,
-    pathMatch: 'full',
-  },
+    {
+        path: '',
+        component: Alerts,
+        pathMatch: 'full',
+    },
 ];

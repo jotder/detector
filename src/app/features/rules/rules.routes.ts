@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { RulesComponent } from './pages/rules/rules.component';
+import {Routes} from '@angular/router';
+import {Rules} from './pages/rules/rules';
 
 export const RULES_ROUTES: Routes = [
-  {
-    path: '',
-    component: RulesComponent,
-    pathMatch: 'full',
-  },
+    {
+        path: '',
+        component: Rules,
+        pathMatch: 'full',
+    },
 ];

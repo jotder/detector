@@ -1,9 +1,0 @@
-<div class="dashboard-container">
-  <app-executive-dashboard [summary]="(executiveSummary$ | async)!"></app-executive-dashboard>
-  <app-analytics-dashboard [summary]="(analyticsSummary$ | async)!"></app-analytics-dashboard>
-  <div class="risk-widgets">
-    <app-risky-stores [stores]="(riskyStores$ | async)!"></app-risky-stores>
-    <app-risky-cashiers [cashiers]="(riskyCashiers$ | async)!"></app-risky-cashiers>
-  </div>
-  <app-drill-down-view></app-drill-down-view>
-</div>

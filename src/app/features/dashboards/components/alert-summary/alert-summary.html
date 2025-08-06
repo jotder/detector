@@ -1,0 +1,18 @@
+@if (summary) {
+    <div class="summary-container">
+        <div class="summary-card">
+            <h3 class="card-title">Open Alerts</h3>
+            <p class="card-value">{{ summary.openAlertCount }}</p>
+        </div>
+        <div class="summary-card">
+            <h3 class="card-title">In Progress</h3>
+            <p class="card-value">{{ summary.inProgressAlertCount }}</p>
+        </div>
+        <div class="summary-card">
+            <h3 class="card-title">Closed Alerts</h3>
+            <p class="card-value">{{ summary.closedAlertCount }}</p>
+        </div>
+    </div>
+} @else {
+    <p>Loading summary...</p>
+}
