@@ -1,3 +1,4 @@
+
 <div class="card">
   <div class="card-header">
     <h3>Risky Cashiers</h3>
@@ -23,4 +24,13 @@
       <p>Loading risky cashiers...</p>
     </div>
   </div>
+
+<div *ngIf="cashiers">
+  <h3>Risky Cashiers</h3>
+  <ul>
+    <li *ngFor="let cashier of cashiers">
+      {{ cashier.name }} - Risk Score: {{ cashier.riskScore }} (Trend: {{ cashier.trend }})
+    </li>
+  </ul>
+
 </div>

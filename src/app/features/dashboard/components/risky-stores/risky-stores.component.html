@@ -1,3 +1,4 @@
+
 <div class="card">
   <div class="card-header">
     <h3>Risky Stores</h3>
@@ -23,4 +24,12 @@
       <p>Loading risky stores...</p>
     </div>
   </div>
+</div>
+<div *ngIf="stores">
+  <h3>Risky Stores</h3>
+  <ul>
+    <li *ngFor="let store of stores">
+      {{ store.name }} - Risk Score: {{ store.riskScore }} (Trend: {{ store.trend }})
+    </li>
+  </ul>
 </div>

@@ -8,6 +8,7 @@ import { DashboardSummary } from '../../models/dashboard-summary.model';
   standalone: true,
   imports: [CommonModule, AlertSummaryComponent],
   template: `
+
     <div class="card">
       <div class="card-header">
         <h2>Executive Dashboard</h2>
@@ -16,6 +17,10 @@ import { DashboardSummary } from '../../models/dashboard-summary.model';
         <app-alert-summary [summary]="summary"></app-alert-summary>
       </div>
     </div>
+
+    <h2>Executive Dashboard</h2>
+    <app-alert-summary [summary]="summary"></app-alert-summary>
+
   `,
   styleUrl: './executive-dashboard.component.scss',
 })
