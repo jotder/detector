@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Risky Cashiers</h3>
+  </div>
+  <div class="card-body">
+    <table *ngIf="cashiers" class="table">
+      <thead>
+        <tr>
+          <th>Cashier Name</th>
+          <th>Risk Score</th>
+          <th>Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cashier of cashiers">
+          <td>{{ cashier.name }}</td>
+          <td>{{ cashier.riskScore }}</td>
+          <td>{{ cashier.trend }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="!cashiers">
+      <p>Loading risky cashiers...</p>
+    </div>
+  </div>
+</div>
