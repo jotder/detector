@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DashboardSummary} from '../../models/dashboard-summary.model';
 
@@ -10,5 +10,5 @@ import {DashboardSummary} from '../../models/dashboard-summary.model';
     styleUrl: './alert-summary.scss'
 })
 export class AlertSummary {
-    @Input() summary: DashboardSummary | null = null;
+    @Input({required: true}) summary!: Signal<DashboardSummary | null>;
 }

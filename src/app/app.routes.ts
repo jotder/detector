@@ -26,7 +26,6 @@ export const routes: Routes = [
                 path: 'reports',
                 loadChildren: () => import('./features/reports/reports.routes').then(m => m.REPORTS_ROUTES)
             },
-            // ... other feature routes
             {
                 path: 'rules',
                 loadChildren: () => import('./features/rules/rules.routes').then(m => m.RULES_ROUTES)

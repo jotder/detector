@@ -5,12 +5,26 @@
     </div>
     <nav class="navigation">
         <ul>
-            <!--          <li *ngFor="let item of navItems() | async">-->
-            <li *ngFor="let item of navItems">
-                <a [routerLinkActiveOptions]="{exact: true}" [routerLink]="item.path" routerLinkActive="active-link">
-                    <span class="nav-label">{{ item.label }}</span>
-                </a>
-            </li>
+            @for (item of navItems; track item.path) {
+                <li>
+                    <a [routerLinkActiveOptions]="{exact: !item.children}" [routerLink]="item.path"
+                       routerLinkActive="active-link">
+                        <span class="nav-label">{{ item.label }}</span>
+                    </a>
+                    @if (item.children) {
+                        <ul class="sub-menu">
+                            @for (child of item.children; track child.path) {
+                                <li>
+                                    <a [routerLinkActiveOptions]="{exact: true}" [routerLink]="child.path"
+                                       routerLinkActive="active-link">
+                                        <span class="nav-label">{{ child.label }}</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
         </ul>
     </nav>
 </aside>

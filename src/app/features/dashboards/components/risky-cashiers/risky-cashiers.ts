@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RiskyCashier} from '../../models/risk-entity.model';
 
@@ -10,5 +10,5 @@ import {RiskyCashier} from '../../models/risk-entity.model';
     styleUrl: './risky-cashiers.scss'
 })
 export class RiskyCashiers {
-    @Input() cashiers: RiskyCashier[] | null = null;
+    @Input({required: true}) cashiers!: Signal<RiskyCashier[] | null>;
 }

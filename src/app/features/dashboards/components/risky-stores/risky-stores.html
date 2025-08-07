@@ -3,32 +3,27 @@
         <h3>Risky Stores</h3>
     </div>
     <div class="card-body">
-        <table *ngIf="stores" class="table">
-            <thead>
-            <tr>
-                <th>Store Name</th>
-                <th>Risk Score</th>
-                <th>Trend</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let store of stores()">
-                <td>{{ store.name }}</td>
-                <td>{{ store.riskScore }}</td>
-                <td>{{ store.trend }}</td>
-            </tr>
-            </tbody>
-        </table>
-        <div *ngIf="!stores">
+        @if(stores()){
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Store Name</th>
+                    <th>Risk Score</th>
+                    <th>Trend</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @for(store of stores(); track store.id){
+                        <tr>
+                            <td>{{ store.name }}</td>
+                            <td>{{ store.riskScore }}</td>
+                            <td>{{ store.trend }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        } @else {
             <p>Loading risky stores...</p>
-        </div>
+        }
     </div>
-</div>
-<div *ngIf="stores">
-    <h3>Risky Stores</h3>
-    <ul>
-        <li *ngFor="let store of stores()">
-            {{ store.name }} - Risk Score: {{ store.riskScore }} (Trend: {{ store.trend }})
-        </li>
-    </ul>
 </div>

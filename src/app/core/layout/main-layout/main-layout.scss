@@ -1,14 +1,24 @@
-:host {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.main-content-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 100vh;
-}
+//:host {
+//  display: flex;
+//  height: 100vh;
+//  width: 100%;
+//  overflow: hidden;
+//}
+//
+//.main-content-area {
+//  flex: 1;
+//  display: flex;
+//  flex-direction: column;
+//  height: 100vh;
+//}
+//
+//app-header {
+//  height: 60px; /* Or your desired header height */
+//  flex-shrink: 0; /* Prevents the header from shrinking */
+//}
+//
+//.content {
+//  flex-grow: 1; /* Allows the content to take up the remaining space */
+//  overflow-y: auto; /* Adds a scrollbar if the content overflows */
+//  padding: 20px; /* Optional: adds some spacing around the content */
+//}

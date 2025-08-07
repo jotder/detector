@@ -2,38 +2,30 @@
     <div class="card-header">
         <h3>Analytics Summary</h3>
     </div>
-    <div class="card-body">
-        <div *ngIf="summary" class="summary-grid">
-            <div class="summary-item">
-                <span class="label">Refunds</span>
-                <span class="value">{{ summary.refunds }}</span>
-            </div>
-            <div class="summary-item">
-                <span class="label">Discounts</span>
-                <span class="value">{{ summary.discounts }}</span>
-            </div>
-            <div class="summary-item">
-                <span class="label">Price Overrides</span>
-                <span class="value">{{ summary.priceOverrides }}</span>
-            </div>
-            <div class="summary-item">
-                <span class="label">Cancels</span>
-                <span class="value">{{ summary.cancels }}</span>
+    @if(summary()){
+        <div class="card-body">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <span class="label">Refunds</span>
+                    <span class="value">{{ summary()!.refunds }}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Discounts</span>
+                    <span class="value">{{ summary()!.discounts }}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Price Overrides</span>
+                    <span class="value">{{ summary()!.priceOverrides }}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Cancels</span>
+                    <span class="value">{{ summary()!.cancels }}</span>
+                </div>
             </div>
         </div>
-        <div *ngIf="!summary">
+    } @else {
+        <div class="card-body">
             <p>Loading analytics summary...</p>
         </div>
-    </div>
-
-    <div *ngIf="summary">
-        <h3>Analytics Summary</h3>
-        <ul>
-            <li>Refunds: {{ summary.refunds }}</li>
-            <li>Discounts: {{ summary.discounts }}</li>
-            <li>Price Overrides: {{ summary.priceOverrides }}</li>
-            <li>Cancels: {{ summary.cancels }}</li>
-        </ul>
-
-    </div>
+    }
 </div>

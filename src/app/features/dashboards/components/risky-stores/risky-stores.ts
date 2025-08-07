@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, Input, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RiskyStore} from '../../models/risk-entity.model';
 
@@ -10,5 +10,5 @@ import {RiskyStore} from '../../models/risk-entity.model';
     styleUrl: './risky-stores.scss'
 })
 export class RiskyStoresComponent {
-    stores = input<RiskyStore[] | null>(null);
+    @Input({required: true}) stores!: Signal<RiskyStore[] | null>;
 }
