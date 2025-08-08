@@ -1,0 +1,18 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Alerts Dashboard</h1>
+    <div class="actions">
+      <mat-form-field appearance="outline">
+        <mat-label>Search Alerts</mat-label>
+        <input matInput [formControl]="searchControl" placeholder="Search by ID, Rule, or Transaction">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="onCreateAlert()">
+        <mat-icon>add</mat-icon>
+        Create New Alert
+      </button>
+    </div>
+  </div>
+
+  <app-alert-list [alerts]="alerts" (view)="onViewAlert($event)" (edit)="onEditAlert($event)" (delete)="onDeleteAlert($event)"></app-alert-list>
+</div>

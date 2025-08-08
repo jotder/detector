@@ -1,0 +1,48 @@
+<form [formGroup]="alertForm" (ngSubmit)="onSubmit()" class="alert-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Rule ID</mat-label>
+    <input matInput formControlName="ruleId" required>
+    @if (alertForm.get('ruleId')?.hasError('required')) {
+      <mat-error>Rule ID is required.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Transaction ID</mat-label>
+    <input matInput formControlName="transactionId" required>
+    @if (alertForm.get('transactionId')?.hasError('required')) {
+      <mat-error>Transaction ID is required.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Severity</mat-label>
+    <mat-select formControlName="severity" required>
+      @for (severity of severities; track severity) {
+        <mat-option [value]="severity">{{ severity | titlecase }}</mat-option>
+      }
+    </mat-select>
+    @if (alertForm.get('severity')?.hasError('required')) {
+      <mat-error>Severity is required.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status" required>
+      @for (status of statuses; track status) {
+        <mat-option [value]="status">{{ status | titlecase }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Assignee ID</mat-label>
+    <input matInput formControlName="assigneeId" placeholder="e.g., user-123">
+  </mat-form-field>
+
+  <div class="form-actions">
+    <button mat-stroked-button type="button" (click)="cancel.emit()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="alertForm.invalid">Save</button>
+  </div>
+</form>

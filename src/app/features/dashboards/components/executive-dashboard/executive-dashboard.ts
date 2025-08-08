@@ -7,21 +7,7 @@ import {DashboardSummary} from '../../models/dashboard-summary.model';
     selector: 'app-executive-dashboard',
     standalone: true,
     imports: [CommonModule, AlertSummary],
-    template: `
-
-        <div class="card">
-            <div class="card-header">
-                <h2>Executive Dashboard</h2>
-            </div>
-            <div class="card-body">
-                <app-alert-summary [summary]="summary"></app-alert-summary>
-            </div>
-        </div>
-
-        <h2>Executive Dashboard</h2>
-        <app-alert-summary [summary]="summary"></app-alert-summary>
-
-    `,
+    templateUrl: 'executive-dashboard.html',
     styleUrl: './executive-dashboard.scss',
 })
 export class ExecutiveDashboard {

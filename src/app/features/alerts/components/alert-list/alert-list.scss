@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.alert-list-container {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.severity-high { color: var(--mat-red-500); font-weight: bold; }
+.severity-medium { color: var(--mat-orange-500); }
+.severity-low { color: var(--mat-gray-500); }
