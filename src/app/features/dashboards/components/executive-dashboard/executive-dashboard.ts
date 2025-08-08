@@ -1,29 +1,27 @@
-import {Component, Input, Signal} from '@angular/core';
+import {Component, Input, signal, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AlertSummary} from '../alert-summary/alert-summary';
 import {DashboardSummary} from '../../models/dashboard-summary.model';
 
 @Component({
-    selector: 'app-executive-dashboard',
-    standalone: true,
-    imports: [CommonModule, AlertSummary],
-    template: `
-
-        <div class="card">
-            <div class="card-header">
-                <h2>Executive Dashboard</h2>
-            </div>
-            <div class="card-body">
-                <app-alert-summary [summary]="summary"></app-alert-summary>
-            </div>
-        </div>
-
+  selector: 'app-executive-dashboard',
+  standalone: true,
+  imports: [CommonModule, AlertSummary],
+  template: `
+    <div class="card">
+      <div class="card-header">
         <h2>Executive Dashboard</h2>
-        <app-alert-summary [summary]="summary"></app-alert-summary>
-
-    `,
-    styleUrl: './executive-dashboard.scss',
+      </div>
+      <div class="card-body">
+        @if (summary()) {
+          <app-alert-summary [summary]="summary"></app-alert-summary>
+        }
+      </div>
+    </div>
+  `,
+  styleUrls: ['./executive-dashboard.scss'],
 })
 export class ExecutiveDashboard {
-    @Input({required: true}) summary!: Signal<DashboardSummary | null>;
+  summary: Signal<DashboardSummary | null> = signal(null);
 }
+
