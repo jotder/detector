@@ -1,18 +1,28 @@
 <div class="dashboard-container">
   <div class="dashboard-header">
     <h1>Alerts Dashboard</h1>
+
     <div class="actions">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="search-box">
         <mat-label>Search Alerts</mat-label>
-        <input matInput [formControl]="searchControl" placeholder="Search by ID, Rule, or Transaction">
-        <mat-icon matSuffix>search</mat-icon>
+        <input matInput [formControl]="searchControl" placeholder="Search by ID, Rule, or Transaction" />
+        <button *ngIf="searchControl.value" mat-icon-button matSuffix (click)="searchControl.setValue('')">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-icon matSuffix *ngIf="!searchControl.value">search</mat-icon>
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="onCreateAlert()">
+
+      <button mat-flat-button color="primary" class="create-button" (click)="onCreateAlert()">
         <mat-icon>add</mat-icon>
-        Create New Alert
+        <span>Create New Alert</span>
       </button>
     </div>
   </div>
 
-  <app-alert-list [alerts]="alerts" (view)="onViewAlert($event)" (edit)="onEditAlert($event)" (delete)="onDeleteAlert($event)"></app-alert-list>
+  <app-alert-list
+    [alerts]="alerts"
+    (view)="onViewAlert($event)"
+    (edit)="onEditAlert($event)"
+    (delete)="onDeleteAlert($event)"
+  ></app-alert-list>
 </div>

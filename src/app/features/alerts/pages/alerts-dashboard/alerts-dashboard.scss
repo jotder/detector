@@ -3,22 +3,55 @@
 }
 
 .dashboard-container {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 1rem;
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
 }
 
 .actions {
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  min-width: 250px;
+  flex: 1;
+}
+
+.create-button {
+  white-space: nowrap;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .create-button,
+  .search-box {
+    width: 100%;
+  }
 }
