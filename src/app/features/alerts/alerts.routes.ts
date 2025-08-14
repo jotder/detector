@@ -1,31 +1,26 @@
 import { Routes } from '@angular/router';
-import { Analyze } from './pages/analysis/analyze';
 import { APP_ROUTES } from '../../core/config/routes.config';
-import { AlertsDashboard } from './pages/alerts-dashboard/alerts-dashboard';
-import { AlertViewer } from './pages/alert-viewer/alert-viewer';
-import { AlertEditor } from './pages/alert-editor/alert-editor';
 
 export const ALERTS_ROUTES: Routes = [
     {
         path: '',
-        component: AlertsDashboard,
+        loadComponent: () => import('./pages/alerts-dashboard/alerts-dashboard').then(m => m.AlertsDashboard),
         pathMatch: 'full',
     },
     {
         path: APP_ROUTES.NEW,
-        component: AlertEditor,
+        loadComponent: () => import('./pages/alert-editor/alert-editor').then(m => m.AlertEditor),
     },
     {
         path: APP_ROUTES.ANALYZE,
-        component: Analyze,
-    },
+        loadComponent: () => import('./pages/analysis/analyze').then(m => m.Analyze)
+      },
     {
-        // Must be after specific routes like 'new' and 'analyze'
         path: ':id',
-        component: AlertViewer,
+        loadComponent: () => import('./pages/alert-viewer/alert-viewer').then(m => m.AlertViewer),
     },
     {
-        path: `:id/${APP_ROUTES.EDIT}`,
-        component: AlertEditor,
+        path: ':id/' + APP_ROUTES.EDIT,
+        loadComponent: () => import('./pages/alert-editor/alert-editor').then(m => m.AlertEditor),
     },
 ];
