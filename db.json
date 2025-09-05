@@ -10126,8 +10126,6 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/vodafone.png",
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10150,8 +10148,6 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10174,8 +10170,6 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/mtnl.png",
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10198,8 +10192,6 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10222,8 +10214,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10246,8 +10237,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/mtnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10270,8 +10260,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/jio.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10294,8 +10283,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/bsnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10318,8 +10306,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/vodafone.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10342,8 +10329,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/vodafone.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10366,8 +10352,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10390,8 +10375,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10414,8 +10398,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/bsnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10438,8 +10421,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/bsnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10462,8 +10444,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10486,8 +10467,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10510,8 +10490,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/vodafone.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10534,8 +10513,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10558,8 +10536,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10582,8 +10559,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10606,8 +10582,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/vodafone.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10630,8 +10605,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10654,8 +10628,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10678,8 +10651,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10702,8 +10674,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10726,8 +10697,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/airtel.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10750,8 +10720,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/jio.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10774,8 +10743,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/bsnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10798,8 +10766,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/bsnl.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0
@@ -10822,8 +10789,7 @@
            "fill": "",
            "stroke": "#000"
        },
-       "type": "image",
-       "img": "assets/operators/idea.png",
+
        "labelCfg": {
            "style": {
                "opacity": 0

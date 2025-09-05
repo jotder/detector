@@ -1,18 +1,42 @@
-<div class="layout-buttons">
-  <ng-container *ngFor="let layout of chartLayouts">
-    <button
-      (click)="switchLayout(layout.value)"
-      [title]="layout.name"
-      [ngClass]="{
-        'chart-icon-btn': true,
-        active: selectedChartType === layout.value
-      }"
-    >
-      <img [src]="layout.icon" [alt]="layout.name" />
-    </button>
-  </ng-container>
-</div>
+<div class="toolbar">
+  <div class="layout-buttons">
+    <ng-container *ngFor="let layout of chartLayouts">
+      <button
+        (click)="switchLayout(layout.value)"
+        [title]="layout.name"
+        [ngClass]="{
+          'chart-icon-btn': true,
+          active: selectedChartType === layout.value
+        }"
+      >
+        <img [src]="layout.icon" [alt]="layout.name" />
+      </button>
+    </ng-container>
+  </div>
 
+  <!-- Move toolbox inside toolbar, on the right -->
+  <div class="right-actions">
+    <div class="toolbox">
+      <button (click)="toggleTool('lasso')" [class.active]="activeTool === 'lasso'">✏️</button>
+      <button (click)="toggleTool('fisheye')" [class.active]="activeTool === 'fisheye'">👁️</button>
+      <button (click)="toggleTool('drag-canvas')" [class.active]="activeTool === 'drag-canvas'">✋</button>
+      <button (click)="toggleShortestPathMode()" [class.active]="isShortestPathActive">🧭</button>
+      <button (click)="toggleTool('hover-activate')" [class.active]="activeTool === 'hover-activate'">✨</button>
+    </div>
+  </div>
+</div>
+<div class="shortest-path-controls" *ngIf="isShortestPathActive">
+  <h4>Shortest Path Finder</h4>
+  <p>Select two nodes on the graph to find the shortest path between them.</p>
+  <div>
+    <strong>Source:</strong> {{ sourceNode ? sourceNode.id : 'None' }}
+  </div>
+  <div>
+    <strong>Target:</strong> {{ targetNode ? targetNode.id : 'None' }}
+  </div>
+  <button (click)="findAndShowShortestPath()" [disabled]="!sourceNode || !targetNode">Find Path</button>
+  <button (click)="toggleShortestPathMode()">Cancel</button>
+</div>
 <div
   #container
   style="width: 100%; height: 500px; border: 1px solid #ccc"
